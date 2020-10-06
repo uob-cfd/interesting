@@ -28,7 +28,11 @@ test = {
           'code': r"""
           >>> # Still not quite there.  You need to multiply the calculation
           >>> # of the debt after one year by the debt_increaser variable.
-          >>> debt_two_years == my_debt * debt_increaser * debt_increaser
+          >>> # The check below allows for tiny differences when you calculate
+          >>> # the value in slightly different ways.
+          >>> from numpy import isclose
+          >>> isclose(debt_two_years,
+          ...         my_debt * debt_increaser * debt_increaser)
           True
           """,
           'hidden': False,
