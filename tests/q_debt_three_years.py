@@ -43,7 +43,7 @@ test = {
           >>> # the value in slightly different ways.
           >>> from numpy import isclose
           >>> isclose(debt_three_years, my_debt * debt_increaser ** 3)
-          True
+          np.True_
           """,
           'hidden': False,
           'locked': False
