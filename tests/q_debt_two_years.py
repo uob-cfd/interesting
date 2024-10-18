@@ -31,13 +31,11 @@ test = {
           >>> # The check below allows for tiny differences when you calculate
           >>> # the value in slightly different ways.
           >>> from numpy import isclose
-          >>> isclose(debt_two_years,
-          ...         my_debt * debt_increaser * debt_increaser)
-          np.True_
+          >>> assert isclose(debt_two_years, my_debt * debt_increaser * debt_increaser)
           """,
           'hidden': False,
           'locked': False
-        },
+        }
       ],
       'scored': True,
       'setup': '',
